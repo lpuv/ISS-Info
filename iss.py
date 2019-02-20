@@ -26,3 +26,13 @@ lat = location['latitude']
 lon = location['longitude']
 print('Latitude: ', lat)
 print('Longitude: ', lon)
+
+screen = turtle.Screen()
+screen.setup(720, 360)
+screen.setworldcoordinates(-180, -90, 180, 90)
+screen.bgpic('map copy.png')
+
+screen.register_shape('iss.png')
+iss = turtle.Turtle()
+iss.shape('iss.png')
+iss.setheading(90)
