@@ -21,4 +21,8 @@ url = 'http://api.open-notify.org/iss-now.json'
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-print(result)
+location = result["iss_position"]
+lat = location['latitude']
+lon = location['longitude']
+print('Latitude: ', lat)
+print('Longitude: ', lon)
