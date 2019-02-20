@@ -17,3 +17,8 @@ for p in people:
 
 
 
+url = 'http://api.open-notify.org/iss-now.json'
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
+
+print(result)
